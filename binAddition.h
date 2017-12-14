@@ -3,8 +3,8 @@
 
 
 typedef struct {
-    char *digits;
-    size_t length;
+    char *digits; //array containing the whole number
+    size_t length; //number of digits in the number (length of the number)
 } Number;
 
 

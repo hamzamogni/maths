@@ -1,23 +1,20 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 #include "binAddition.h"
 
 int main()
 {
-    Number* a, *b;
-    a = (Number *) malloc(sizeof(Number));
-    b = (Number*)malloc(sizeof(Number));
+    Number *a, *b;                          //the two numbers to sum (two instances of struct Number)
+    a = (Number *) malloc(sizeof(Number));  //allocating memory for the first number
+    b = (Number*)malloc(sizeof(Number));    //allocating memory for the second number
 
+    // initializing the two numbers (struct Number instances);
     initNum(a);
     initNum(b);
 
-    Number* c = add(a, b);
+    Number* c = add(a, b); // adding the two numbers and affecting he returned output to a new number
 
-    printNum(c);
-
-
+    printNum(c); //printing the sum
 
     return 0;
 }
-
