@@ -17,4 +17,4 @@ Nouveautés dans le code :
 
 *** Si les nombres sont lu à partir d'un fichier par exemple alors la limite seul est la RAM disponible
 
-*** le temps d'éxécution du code quand il a été testé avec 4096 caractères était moins d'une seconde
+*** temps d'éxéction --> moins d'une seconde
