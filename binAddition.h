@@ -1,5 +1,5 @@
-#ifndef MATHS_BINADDITION_H
-#define MATHS_BINADDITION_H
+#ifndef BINADDITION
+#define BINADDITION
 
 
 typedef struct {
@@ -10,6 +10,6 @@ typedef struct {
 
 void initNum(Number* a);
 void printNum(Number* a);
-Number add(Number* a, Number* b);
+Number* add(Number* a, Number* b);
 
-#endif //MATHS_BINADDITION_H
+#endif

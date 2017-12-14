@@ -5,14 +5,16 @@
 
 int main()
 {
-    Number a, b;
+    Number* a, *b;
+    a = (Number *) malloc(sizeof(Number));
+    b = (Number*)malloc(sizeof(Number));
 
-    initNum(&a);
-    initNum(&b);
+    initNum(a);
+    initNum(b);
 
-    Number c = add(&a, &b);
+    Number* c = add(a, b);
 
-    printNum(&c);
+    printNum(c);
 
 
 
