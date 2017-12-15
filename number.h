@@ -7,7 +7,7 @@ typedef struct {
     size_t length; //number of digits in the number (length of the number)
 } Number;
 
-
+Number* affectNumber(Number* a, Number* b);
 void initNum(Number* a);
 void printNum(Number* a);
 Number* add(Number* a, Number* b);
