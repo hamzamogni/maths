@@ -13,7 +13,7 @@ Number* add(Number* a, Number* b) {
      */
     Number* output;
     output = (Number*)calloc(1, sizeof(Number));
-    
+
     Number* x = (a->length >= b->length) ? a : b; // storing the biggest number in x
     Number* y = (a->length >= b->length) ? b : a; // storing the smallest number in y
 
@@ -23,7 +23,7 @@ Number* add(Number* a, Number* b) {
         remainder = 0,
         i;
 
-    output->digits = (char*)calloc(x->length, sizeof(char)); // allocating memory (length of the biggest number)
+    output->digits = (char*)calloc(x->length+1, sizeof(char)); // allocating memory (length of the biggest number)
     output->length = x->length;                              // updating output length
     output->digits[output->length] = '\0';                   // last output bit should be \0 character
 
@@ -42,9 +42,10 @@ Number* add(Number* a, Number* b) {
     if (remainder == 0) // if last remainder is zero we return the output as it is
         return output;
     else {              // if last remainder is one then the first bit should be 1
-        output->digits = realloc(output->digits, output->length+1); // adding one bit to the output
+        output->digits = realloc(output->digits, output->length+2); // adding one bit to the output
+        output->digits[output->length+1] = '\0';
         output->length++;                                           // updating output length
-        for(i=output->length; i>0; i--) { //shifting the array by one bit to the right
+        for(i=output->length    ; i>0; i--) { //shifting the array by one bit to the right
             output->digits[i] = output->digits[i-1];
         }
         output->digits[0] = '1'; // first bit should be 1

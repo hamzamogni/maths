@@ -20,6 +20,5 @@ Number* pascalOf(int a) {
         for(col=1; col < a+1; col++)
             affectNumber(&ret[line][col], add(&ret[!line][col - 1], &ret[!line][col]));
 
-
     return ret[line];
 }

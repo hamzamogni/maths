@@ -3,11 +3,13 @@
 
 int main() {
 
-    Number* b = pascalOf(5);
-
+    int num;
+    printf("Vous voulez calculer les coefficients de ? Donnez un nombre ");
+    scanf("%d", &num);
+    Number *a = pascalOf(num);
     int cou;
-    for(cou=0; cou < 5; cou++)
-        printNum(&b[cou]);
-
+    for(cou=0; cou < num+1; cou++)
+        printNum(&a[cou]);
+    printf("\n");
     return 0;
 }
