@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 #include "number.h"
 
 int main() {
@@ -8,7 +6,8 @@ int main() {
     initNum(&a[0]);
     initNum(&a[1]);
 
-    add(&a[0], &a[1]);
+    affectNumber(&a[2], add(&a[1], &a[0]));
 
+    printNum(&a[2]);
     return 0;
 }

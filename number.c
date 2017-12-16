@@ -25,6 +25,7 @@ void printNum(Number* a) {  // simple function that print the big number in the 
     printf("[%s]\n", a->digits);
 }
 
-Number* affectNumber(Number* a, Number* b) {
-
+void affectNumber(Number* a, Number* b) {
+    a->digits = b->digits;
+    a->length = b->length;
 }
