@@ -8,7 +8,7 @@ void initNum(Number* a) {
      * it takes input from user (STDIN)
      * the array is dynamically allocated
      */
-    a->digits = (char *) malloc(sizeof(char));
+    a->digits = (char *) calloc(1, sizeof(char));
     a->length=0;
 
     int i=0;

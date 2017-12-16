@@ -45,7 +45,7 @@ Number* add(Number* a, Number* b) {
         output->digits = realloc(output->digits, output->length+2); // adding one bit to the output
         output->digits[output->length+1] = '\0';
         output->length++;                                           // updating output length
-        for(i=output->length    ; i>0; i--) { //shifting the array by one bit to the right
+        for(i=output->length; i>0; i--) { //shifting the array by one bit to the right
             output->digits[i] = output->digits[i-1];
         }
         output->digits[0] = '1'; // first bit should be 1
