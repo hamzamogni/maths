@@ -22,16 +22,17 @@ void initNum(Number* a) {
 }
 
 void printNum(Number* a) {  // simple function that print the big number in the STDOUT
-    printf("[%s]\n", a->digits);
+    printf("%s ", a->digits);
 }
 
-void affectNumber(Number* a, Number* b) {
-    a->digits = b->digits;
-    a->length = b->length;
+void affectNumber(Number* dest, Number* src) {
+    dest->digits = src->digits;
+    dest->length = src->length;
 }
 
 Number* strToNum(char* numStr) {
     Number* ret = (Number*)calloc(1, sizeof(Number));
+
     ret->digits = numStr;
     ret->length = strlen(numStr);
 

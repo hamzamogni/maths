@@ -1,13 +1,13 @@
 #include "number.h"
+#include <stdio.h>
 
 int main() {
-    Number a[3];                        //the two numbers to sum (two instances of struct Number)
 
-    initNum(&a[0]);
-    initNum(&a[1]);
+    Number* b = pascalOf(5);
 
-    affectNumber(&a[2], add(&a[1], &a[0]));
+    int cou;
+    for(cou=0; cou < 5; cou++)
+        printNum(&b[cou]);
 
-    printNum(&a[2]);
     return 0;
 }

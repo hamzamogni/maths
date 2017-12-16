@@ -12,7 +12,7 @@ Number* add(Number* a, Number* b) {
      * so minimum memory that should be allocated for output array is N (which is the length of the biggest added numbers)
      */
     Number* output;
-    output = (Number*)malloc(sizeof(Number));
+    output = (Number*)calloc(1, sizeof(Number));
     
     Number* x = (a->length >= b->length) ? a : b; // storing the biggest number in x
     Number* y = (a->length >= b->length) ? b : a; // storing the smallest number in y

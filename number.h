@@ -9,10 +9,14 @@ typedef struct {
     size_t length; //number of digits in the number (length of the number)
 } Number;
 
-void affectNumber(Number* a, Number* b);
+void affectNumber(Number* dest, Number* src);
 void initNum(Number* a);
 Number* strToNum(char* numStr);
 void printNum(Number* a);
 Number* add(Number* a, Number* b);
+
+
+
+Number* pascalOf(int a);
 
 #endif
