@@ -1,7 +1,7 @@
 #ifndef BINADDITION
 #define BINADDITION
 
-#include "stdlib.h"
+#include <stdlib.h>
 
 
 typedef struct {
@@ -11,6 +11,7 @@ typedef struct {
 
 void affectNumber(Number* a, Number* b);
 void initNum(Number* a);
+Number* strToNum(char* numStr);
 void printNum(Number* a);
 Number* add(Number* a, Number* b);
 

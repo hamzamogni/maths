@@ -1,6 +1,6 @@
 #include "number.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 void initNum(Number* a) {
     /*
@@ -8,7 +8,7 @@ void initNum(Number* a) {
      * it takes input from user (STDIN)
      * the array is dynamically allocated
      */
-    a->digits = (char *) malloc(sizeof(char));
+    a->digits = (char *) calloc(1, sizeof(char));
     a->length=0;
 
     int i=0;
@@ -28,4 +28,12 @@ void printNum(Number* a) {  // simple function that print the big number in the 
 void affectNumber(Number* a, Number* b) {
     a->digits = b->digits;
     a->length = b->length;
+}
+
+Number* strToNum(char* numStr) {
+    Number* ret = (Number*)calloc(1, sizeof(Number));
+    ret->digits = numStr;
+    ret->length = strlen(numStr);
+
+    return ret;
 }
