@@ -4,12 +4,10 @@
 int main() {
 
     int num;
-    printf("Vous voulez calculer les coefficients de ? Donnez un nombre ");
-    scanf("%d", &num);
-    Number *a = pascalOf(num);
-    int cou;
-    for(cou=0; cou < num+1; cou++)
-        printNum(&a[cou]);
-    printf("\n");
+    Number a, b, *c;
+    initNum(&a);
+    initNum(&b);
+    c = add(&a, &b);
+    printNum(c);
     return 0;
 }

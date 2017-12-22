@@ -39,16 +39,17 @@ Number* add(Number* a, Number* b) {
         }
     }
 
-    if (remainder == 0) // if last remainder is zero we return the output as it is
-        return output;
-    else {              // if last remainder is one then the first bit should be 1
-        output->digits = realloc(output->digits, output->length+2); // adding one bit to the output
+    if (remainder != 0) {              // if last remainder is one then the first bit should be 1
+        output->digits = realloc(output->digits, output->length+2); // adding two bits to the output
         output->digits[output->length+1] = '\0';
         output->length++;                                           // updating output length
-        for(i=output->length; i>0; i--) { //shifting the array by one bit to the right
+        for(i=output->length; i>0; i--) //shifting the array by one bit to the right
             output->digits[i] = output->digits[i-1];
-        }
+
         output->digits[0] = '1'; // first bit should be 1
-        return output;           // we return the final output
     }
+
+    removeZeroes(output);
+    return output;           // we return the final output
+
 }

@@ -1,5 +1,6 @@
 #include "number.h"
 #include <stdio.h>
+#include <ctype.h>
 #include <string.h>
 
 void initNum(Number* a) {
@@ -38,4 +39,15 @@ Number* strToNum(char* numStr) {
     ret->length = strlen(numStr);
 
     return ret;
+}
+
+void removeZeroes(Number *a) {
+    int i, j=0;
+
+    for(i=0; i < a->length-1; i++)
+        if      (a->digits[i] != '0')  break;
+        else if (a->digits[i] == '0')  j++;
+
+    a->digits += j;
+    a->length -= j;
 }

@@ -13,7 +13,9 @@ void affectNumber(Number* dest, Number* src);
 void initNum(Number* a);
 Number* strToNum(char* numStr);
 void printNum(Number* a);
+void removeZeroes(Number *a);
 Number* add(Number* a, Number* b);
+
 
 
 
