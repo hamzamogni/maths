@@ -49,7 +49,7 @@ Number* add(Number* a, Number* b) {
         output->digits[0] = '1'; // first bit should be 1
     }
 
-    removeZeroes(output);
+
     return output;           // we return the final output
 
 }

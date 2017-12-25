@@ -1,7 +1,5 @@
 #include "number.h"
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+
 
 void initNum(Number* a) {
     /*
@@ -21,6 +19,7 @@ void initNum(Number* a) {
     }
     a->digits = realloc(a->digits, a->length+1 + sizeof(char)); // last bit of the final array should be \0 character
     a->digits[a->length+1] = '\0';
+    removeZeroes(a);
 }
 
 void printNum(Number* a) {  // simple function that print the big number in the STDOUT
@@ -37,7 +36,7 @@ Number* strToNum(char* numStr) {
 
     ret->digits = numStr;
     ret->length = strlen(numStr);
-
+    removeZeroes(ret);
     return ret;
 }
 
